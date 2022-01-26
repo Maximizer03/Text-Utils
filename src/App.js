@@ -7,7 +7,7 @@ import Alert from "./components/Alert";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
-	const [mode, setMode] = useState("light"); // Whether dark mode is enabled or not
+	const [mode, setMode] = useState("light");
 	const [alert, setAlert] = useState(null);
 
 	const showAlert = (message, type) => {
@@ -19,7 +19,6 @@ function App() {
 			setAlert(null);
 		}, 1500);
 	};
-
 	const toggleMode = () => {
 		if (mode === "light") {
 			setMode("dark");
@@ -38,8 +37,6 @@ function App() {
 				<Alert alert={alert} />
 				<div className="container my-3">
 					<Switch>
-						{/* /users --> Component 1
-        /users/home --> Component 2 */}
 						<Route exact path="/about">
 							<About mode={mode} />
 						</Route>
@@ -52,5 +49,4 @@ function App() {
 		</>
 	);
 }
-
 export default App;
