@@ -6,7 +6,6 @@ import React, { useState } from "react";
 import Alert from "./components/Alert";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-// yo bro
 function App() {
 	const [mode, setMode] = useState("light");
 	const [alert, setAlert] = useState(null);
